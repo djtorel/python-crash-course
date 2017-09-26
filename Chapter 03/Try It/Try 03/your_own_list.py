@@ -2,7 +2,7 @@
 # several examples. Use your list to print a series of statements about these
 # items, such as "I would like to own a Honda motorcycle"
 
-cars = ["VW Golf R", "Honda Civic Type-R", "BMW M3"]
+cars = ["VW Golf R", "Honda Civic Type-R", "BMW M4"]
 
 print("I would really like to drive a " + cars[2])
 

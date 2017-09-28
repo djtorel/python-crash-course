@@ -4,9 +4,9 @@
 
 # Use insert() to add one new guest to the beginning of your list.
 
-# use insert() to add one new guest to the middle of your list.
+# Use insert() to add one new guest to the middle of your list.
 
-# use append() to add one new guest to the end of your list.
+# Use append() to add one new guest to the end of your list.
 
 # Print a new set of invitation messages, one for each person in your list.
 

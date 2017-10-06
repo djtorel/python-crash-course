@@ -9,7 +9,7 @@ sandwich_orders = ['tuna', 'pastrami', 'club', 'blt', 'pastrami',
                    'hamburger', 'roast beef', 'pastrami', ]
 finished_sandwiches = []
 
-print("The deli has run out of pastrami!")
+print("The deli has run out of pastrami!\n")
 
 while sandwich_orders:
     sandwich = sandwich_orders.pop(0)

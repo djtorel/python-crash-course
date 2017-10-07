@@ -4,6 +4,9 @@
 # pieces of information, and a method called open_restaurant() that
 # prints a message indicating that the restaurant is open.
 
+# Make an instance called restaurant from your class. Print the two
+# attributes individually, and then call both methods.
+
 
 class Restaurant():
     """A simple way to model a restaurant"""
@@ -24,5 +27,7 @@ class Restaurant():
 
 
 paulys = Restaurant("paulys pizza", "pizza")
+print(paulys.name)
+print(paulys.type)
 paulys.describe_restaurant()
 paulys.open_restaurant()

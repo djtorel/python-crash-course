@@ -4,6 +4,8 @@
 # appears on a new line in the file.
 
 file = 'guest_book.txt'
+
+# Clearing file so it's new every time this is run.
 with open(file, 'w') as file_object:
     file_object.write('')
 

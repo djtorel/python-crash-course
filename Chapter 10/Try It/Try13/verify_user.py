@@ -37,16 +37,14 @@ def get_new_username():
 
 def verify_user(username):
     if username:
-        verified = input("Are you " + username + "? (y/n) ")
+        while True:
+            verified = input("Are you " + username + "? (y/n) ")
+            if verified == 'y':
+                return True
+            elif verified == 'n':
+                return False
     else:
         return False
-
-    if verified == 'y':
-        return True
-    elif verified == 'n':
-        return False
-    else:
-        verify_user(username)
 
 
 def greet_user():

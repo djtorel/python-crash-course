@@ -16,9 +16,8 @@ def rocket():
     pygame.init()
     r_settings = Settings()
     # Set up Window, background, and title bar caption
-    screen = pygame.display.set_mode(
-        (r_settings.screen_width, r_settings.screen_height))
-    pygame.display.set_caption("Rocket")
+    screen = gf.window(r_settings.screen_width, r_settings.screen_height,
+                       r_settings.caption)
 
     while True:
         gf.check_events()

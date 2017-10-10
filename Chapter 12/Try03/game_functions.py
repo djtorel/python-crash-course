@@ -11,6 +11,13 @@ def check_events():
             sys.exit()
 
 
+def window(width, height, caption):
+    """Create window using width, height, and caption"""
+    screen = pygame.display.set_mode((width, height))
+    pygame.display.set_caption(caption)
+    return screen
+
+
 def update_screen(r_settings, screen):
     # Draw background
     screen.fill(r_settings.bg_color)

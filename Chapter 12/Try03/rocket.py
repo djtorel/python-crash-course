@@ -7,14 +7,16 @@ import sys
 
 import pygame
 
+from settings import Settings
+
 
 def rocket():
     """Init Pygame and run game functions and main loop"""
     pygame.init()
-
+    r_settings = Settings()
     # Set up Window, background, and title bar caption
-    screen = pygame.display.set_mode((800, 600))
-    bg_color = (40, 40, 40)
+    screen = pygame.display.set_mode(
+        (r_settings.screen_width, r_settings.screen_height))
     pygame.display.set_caption("Rocket")
 
     while True:
@@ -24,7 +26,7 @@ def rocket():
                 sys.exit()
 
         # Draw background
-        screen.fill(bg_color)
+        screen.fill(r_settings.bg_color)
 
         # Refresh screen
         pygame.display.flip()

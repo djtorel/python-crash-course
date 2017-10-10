@@ -9,6 +9,7 @@ def check_events():
         if event.type == pygame.QUIT:
             sys.exit()
 
+
 def update_screen(ai_settings, screen, ship):
     """Update images on the screen and flip to the new screen"""
     # Redraw the screen each pass through the loop.

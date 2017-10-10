@@ -8,6 +8,7 @@ import sys
 import pygame
 
 from settings import Settings
+import game_functions as gf
 
 
 def rocket():
@@ -20,16 +21,8 @@ def rocket():
     pygame.display.set_caption("Rocket")
 
     while True:
-        # Start event loop
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-
-        # Draw background
-        screen.fill(r_settings.bg_color)
-
-        # Refresh screen
-        pygame.display.flip()
+        gf.check_events()
+        gf.update_screen(r_settings, screen)
 
 
 rocket()

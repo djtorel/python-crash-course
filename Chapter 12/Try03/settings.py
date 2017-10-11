@@ -10,4 +10,4 @@ class Settings():
         self.caption = "Rocket"
 
         # Rocket settings
-        self.speed_factor = 2
+        self.speed_factor = 0.5

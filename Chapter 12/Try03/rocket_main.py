@@ -22,7 +22,9 @@ def rocket():
     rocket = Rocket(r_settings, screen)
 
     while True:
-        gf.check_events()
+        # Main game loop
+        gf.check_events(rocket)
+        rocket.update()
         gf.update_screen(r_settings, screen, rocket)
 
 

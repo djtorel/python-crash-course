@@ -1,27 +1,19 @@
-# Make a game that begins with a rocket in the center of the screen.
-# Allow the player to move the rocket up, down, left, or right using the
-# four arrow keys. Make sure the rocket never moves beyond any edge of
-# the screen.
-
-import sys
-
 import pygame
 
-from settings import Settings
-import game_functions as gf
 
+class Rocket():
+    """Stores and manipulates data for Rocket"""
 
-def rocket():
-    """Init Pygame and run game functions and main loop"""
-    pygame.init()
-    r_settings = Settings()
-    # Set up Window, background, and title bar caption
-    screen = gf.window(r_settings.screen_width, r_settings.screen_height,
-                       r_settings.caption)
+    def __init__(self, r_settings, screen):
+        """Initialize values for settings and screen"""
+        self.r_settings = r_settings
+        self.screen = screen
+        # Setting up rocket
+        self.image = pygame.image.load('rocket.png')
+        # Getting rects to get coordinates to center rocket
+        self.rect = self.image.get_rect()
+        self.screen_rect = screen.get_rect()
+        self.rect.center = self.screen_rect.center
 
-    while True:
-        gf.check_events()
-        gf.update_screen(r_settings, screen)
-
-
-rocket()
+    def blitme(self):
+        self.screen.blit(self.image, self.rect)

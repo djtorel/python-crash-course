@@ -18,9 +18,11 @@ def window(width, height, caption):
     return screen
 
 
-def update_screen(r_settings, screen):
+def update_screen(r_settings, screen, rocket):
     # Draw background
     screen.fill(r_settings.bg_color)
 
+    # Draw ship
+    rocket.blitme()
     # Refresh screen
     pygame.display.flip()

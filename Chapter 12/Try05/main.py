@@ -29,9 +29,10 @@ def main():
     while True:
 
         # Check for events
-        gf.check_events()
+        gf.check_events(ship)
 
         # Update ship
+        ship.update()
 
         # Update bullets
 

@@ -13,7 +13,7 @@ class Ship():
         # Set image for ship
         self.image = pygame.image.load('images\ship.png')
 
-        # Set up rects
+        # Set rects
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
@@ -24,8 +24,9 @@ class Ship():
         self.rect.centery = self.screen_rect.centery
         self.rect.left = self.screen_rect.left
 
-        # Set up speed factor
+        # Set speed factor
         self.speed_factor = self.g_settings.ship_speed_factor
 
     def blitme(self):
+        """Draw ship to screen"""
         self.screen.blit(self.image, self.rect)

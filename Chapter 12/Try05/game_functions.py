@@ -17,7 +17,10 @@ def check_events():
             sys.exit()
 
 
-def update_screen(screen, g_settings):
+def update_screen(screen, g_settings, ship):
+    # Fill background
     screen.fill(g_settings.bg_color)
+    # Draw ship
+    ship.blitme()
 
     pygame.display.flip()

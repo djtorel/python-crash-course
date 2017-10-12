@@ -8,6 +8,7 @@
 import pygame
 
 from settings import Settings
+from ship import Ship
 import game_functions as gf
 
 
@@ -22,6 +23,7 @@ def main():
                            g_settings.caption)
 
     # Set up variables for ship and bullets
+    ship = Ship(screen, g_settings)
 
     # Main loop
     while True:
@@ -34,7 +36,7 @@ def main():
         # Update bullets
 
         # Refresh screen
-        gf.update_screen(screen, g_settings)
+        gf.update_screen(screen, g_settings, ship)
 
 
 main()

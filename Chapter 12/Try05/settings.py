@@ -10,10 +10,10 @@ class Settings():
         self.caption = "Sidways Shooter"
 
         # Ship settings
-        self.ship_speed_factor = 1.5
+        self.ship_speed_factor = 2
 
         # Bullet settings
         self.bullet_width = 15
         self.bullet_height = 3
         self.bullet_color = (233, 233, 23)
-        self.bullet_speed_factor = 1
+        self.bullet_speed_factor = 1.5

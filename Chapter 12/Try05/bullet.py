@@ -27,9 +27,13 @@ class Bullet(Sprite):
         self.rect.centery = ship.rect.centery
         self.rect.left = ship.rect.right
 
+        # Store center as float
+        self.center = float(self.rect.centerx)
+
     def update(self):
         """Update bullet position"""
-        self.rect.centerx += self.speed
+        self.center += self.speed
+        self.rect.centerx = self.center
 
     def draw_bullet(self):
         """Draw bullet to screen"""

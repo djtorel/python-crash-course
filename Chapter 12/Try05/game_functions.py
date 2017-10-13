@@ -44,7 +44,7 @@ def check_events(screen, g_settings, ship, bullets):
 
 
 def draw_bullets(bullets):
-    """Function to update bullets on screen"""
+    """Function to draw bullets to screen"""
     for bullet in bullets.sprites():
         bullet.draw_bullet()
 

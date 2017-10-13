@@ -14,6 +14,7 @@ def new_window(screen_width, screen_height, caption):
 
 
 def check_keydown_events(event, screen, g_settings, ship, bullets):
+    """Actions to perform on keydown events"""
     if event.key == pygame.K_UP:
         ship.moving_up = True
     elif event.key == pygame.K_DOWN:
@@ -24,6 +25,7 @@ def check_keydown_events(event, screen, g_settings, ship, bullets):
 
 
 def check_keyup_events(event, ship):
+    """Actions to perform on keyup events"""
     if event.key == pygame.K_UP:
         ship.moving_up = False
     elif event.key == pygame.K_DOWN:

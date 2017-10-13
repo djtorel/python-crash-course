@@ -6,6 +6,7 @@
 
 # Imports
 import pygame
+from pygame.sprite import Group
 
 from settings import Settings
 from ship import Ship
@@ -24,20 +25,22 @@ def main():
 
     # Set up variables for ship and bullets
     ship = Ship(screen, g_settings)
+    bullets = Group()
 
     # Main loop
     while True:
 
         # Check for events
-        gf.check_events(ship)
+        gf.check_events(screen, g_settings, ship, bullets)
 
         # Update ship
         ship.update()
 
         # Update bullets
+        gf.update_bullets(bullets)
 
         # Refresh screen
-        gf.update_screen(screen, g_settings, ship)
+        gf.update_screen(screen, g_settings, ship, bullets)
 
 
 main()

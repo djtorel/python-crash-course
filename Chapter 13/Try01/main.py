@@ -3,10 +3,10 @@
 
 # Imports
 import pygame
+from pygame.sprite import Group
 
 from settings import Settings
 import game_functions as gf
-from star import Star
 
 # Main function
 
@@ -22,8 +22,11 @@ def main():
                            g_settings.screen_height,
                            g_settings.caption)
 
-    # Create star object
-    star = Star(g_settings, screen)
+    # Create stars group
+    stars = Group()
+
+    # Create star grid
+    gf.create_star_grid(g_settings, screen, stars)
 
     # Game loop
     while True:
@@ -31,7 +34,7 @@ def main():
         gf.check_events()
 
         # Update screen
-        gf.update_screen(g_settings, screen, star)
+        gf.update_screen(g_settings, screen, stars)
 
 
 # Run game

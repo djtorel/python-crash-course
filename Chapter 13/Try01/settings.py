@@ -8,3 +8,6 @@ class Settings():
         self.screen_height = 800
         self.caption = "Stars"
         self.bg_color = (40, 40, 40)
+
+        # Star settings
+        self.star_spacing_factor = 1.25

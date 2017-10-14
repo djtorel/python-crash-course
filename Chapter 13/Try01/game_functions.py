@@ -17,10 +17,13 @@ def check_events():
             sys.exit()
 
 
-def update_screen(g_settings, screen):
+def update_screen(g_settings, screen, star):
     """Functions to run when refreshing screen"""
     # Set background color
     screen.fill(g_settings.bg_color)
+
+    # Draw star
+    star.draw_star()
 
     # Draw fram
     pygame.display.flip()

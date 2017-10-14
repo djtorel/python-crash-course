@@ -6,9 +6,11 @@ import pygame
 
 from settings import Settings
 import game_functions as gf
-
+from star import Star
 
 # Main function
+
+
 def main():
     """Main game function"""
     # Init pygame and settings
@@ -20,13 +22,16 @@ def main():
                            g_settings.screen_height,
                            g_settings.caption)
 
+    # Create star object
+    star = Star(g_settings, screen)
+
     # Game loop
     while True:
         # Check events
         gf.check_events()
 
         # Update screen
-        gf.update_screen(g_settings, screen)
+        gf.update_screen(g_settings, screen, star)
 
 
 # Run game

@@ -13,7 +13,7 @@ class Star(Sprite):
         self.screen = screen
 
         # Set image and rects
-        self.image = pygame.image.load('images\star.png')
+        self.image = pygame.image.load('images\star_small.png')
         self.rect = self.image.get_rect()
         self.screen_rect = self.screen.get_rect()
 
@@ -21,6 +21,10 @@ class Star(Sprite):
         self.spacing = g_settings.star_spacing_factor
         self.rect.x = self.rect.width * (self.spacing - 1)
         self.rect.y = self.rect.height * (self.spacing - 1)
+
+        # Set displacement min and max
+        self.min_displace = self.g_settings.star_displacement_factor[0]
+        self.max_displace = self.g_settings.star_displacement_factor[1]
 
     def blitme(self):
         """Function to draw star object"""

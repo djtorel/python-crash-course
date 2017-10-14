@@ -10,4 +10,5 @@ class Settings():
         self.bg_color = (40, 40, 40)
 
         # Star settings
-        self.star_spacing_factor = 1.25
+        self.star_spacing_factor = 3
+        self.star_displacement_factor = (-30, 30)

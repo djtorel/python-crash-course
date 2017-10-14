@@ -1,4 +1,5 @@
 import sys
+from random import randint
 
 import pygame
 
@@ -33,6 +34,13 @@ def get_number_rows(g_settings, star_height, spacing):
     return number_rows
 
 
+def rand_displace(star):
+    min = star.min_displace
+    max = star.max_displace
+    random_number = randint(min, max)
+    return random_number
+
+
 def create_star(g_settings, screen, stars,
                 star_number, row_number, spacing):
     """Create star object"""
@@ -40,9 +48,9 @@ def create_star(g_settings, screen, stars,
     star_width = star.rect.width
     star_height = star.rect.height
     star.rect.x = ((star_width * (spacing - 1)) + spacing *
-                   star_width * star_number)
+                   star_width * star_number) + rand_displace(star)
     star.rect.y = ((star_height * (spacing - 1)) + spacing *
-                   star_height * row_number)
+                   star_height * row_number) + rand_displace(star)
     stars.add(star)
 
 

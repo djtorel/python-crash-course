@@ -16,4 +16,5 @@ class Settings():
         self.bullet_width = 15
         self.bullet_height = 3
         self.bullet_color = (233, 233, 23)
-        self.bullet_speed_factor = 1.5
+        self.bullet_speed_factor = 1.25
+        self.bullet_max_distance = self.screen_width

@@ -12,7 +12,7 @@ class Bullet(Sprite):
         self.screen = screen
 
         # Set max distance
-        self.max_distance = g_settings.screen_width
+        self.max_distance = g_settings.bullet_max_distance
 
         # Width and height and color
         self.width = g_settings.bullet_width
